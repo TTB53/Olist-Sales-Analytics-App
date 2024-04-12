@@ -1,0 +1,321 @@
+/*
+
+Styles to be applied to the app globally
+
+*/
+:root{
+    --IVORY :#FEFFF1;
+    --AQUAMARINE :#9BCEB5;
+    --DIMGREY :#42403f;
+    --DARKCYAN :#388895;
+    --DARKSLATEGREEN :#4d675a;
+    --AZURE :#E4F2EF;
+    --CADETBLUE :#709784;
+    --DARKSLATECYAN :#1f4f57;
+    --GOLDENROD : #cfa42f;
+    --BLACK : #333333;
+/*
+
+
+    --GAINSBORO : #DBDBDB;
+    --PERSIAN_BLUE : #1c39bb;
+    --ALICE_BLUE : #F3F7FF;
+    --MISTY_ROSE : #fbe4e0;
+    --SOLITUDE : #e6eeff;
+    --GRAY : #808080;
+    --PAUA : #312f4f;
+    --WAIKAWA_GRAY : #696D8C;*/
+}
+
+
+body{
+
+    background-color:var(--IVORY);
+    color:var(DIMGREY);
+/*    font-family:'Montserrat';*/
+    
+}
+
+/* Removing the plotly toolbar from all the graphs*/
+.modebar{
+      display: none !important;
+}
+
+.display-1{
+    font-family:'Bebas Neue';
+    font-size:7.5rem;
+}
+
+
+/*
+h1, h2, h3, h4, h5, h6{
+    font-family:'Bebas Neue';
+}
+*/
+
+.btn{
+    background-color:var(--IVORY);
+    &:hover{
+        background-color:var(--DARKSLATEGREEN);
+        color:var(--IVORY);
+    }
+}
+
+#sidebar{
+    background-color: var(--DARKSLATEGREEN);
+}
+
+#sidebar-toggle{
+        background-color:var(--IVORY);
+}
+
+.filter-card{
+    width:10em;
+    background-color:var(--IVORY);
+}
+
+/*.chip{
+    background-color:var(--DARKSLATEGREEN);
+    padding:.25rem;
+    margin:.75rem 0;
+    border-radius:1rem;
+    color:var(--IVORY);
+}*/
+
+.chip-span{
+    color:var(--DARKSLATEGREEN);
+    font-weight:bold;
+    padding:.25rem;
+    margin-bottom:.25rem;
+
+    .chip{
+        background-color:var(--DARKSLATEGREEN);
+        padding:.25rem;
+        margin:.25rem;
+        border-radius:2em;
+        color:var(--IVORY);
+    }
+}
+
+.card-group{
+    width:100%;
+
+    .card{
+        margin: 1rem;
+    }
+}
+
+.kpi-card{
+    width:100%;
+    background-color:var(--IVORY);
+    border:none;
+    margin:1rem;
+    overflow: hidden;
+    position: relative;
+    /*box-shadow: 1px 1px 3px rgba(0,0,0,0.75);*/
+    min-height:27rem;
+    height:auto;
+   /* display: inline-block;
+    float: left;
+    padding: 1em;
+    border-radius: 0.3em;
+    font-family: sans-serif;
+    min-width: 75%;
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+    height:10rem;*/
+}
+
+.user-selection-card{
+    width:100%;
+    background-color:var(--DARKSLATEGREEN);
+     /*color:var(--DIMGREY);
+   margin:1rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.75);
+    height:auto;
+    min-height:27rem;
+    height:auto;
+    display: inline-block;
+    float: left;
+    padding: 1em;
+    border-radius: 0.3em;
+    font-family: sans-serif;
+    min-width: 75%;
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+    height:10rem;
+    */
+.user-selection-card .nested{
+        background-color(--AZURE);
+    }
+}
+
+.card-group, .card-deck{
+    background: 'transparent';
+ }
+
+#product-slider m n.rc-slider-rail{
+    background-color: var(--DIMGREY);
+}
+
+#top-producing-radio label{
+    margin:.25em;
+    color: var(--DIMGREY);
+}
+
+#top-shipping-radio label{
+    margin:.25em;
+    color: var(--DIMGREY);
+}
+
+*[data-dash-is-loading="true"]{
+    visibility: hidden;
+}
+*[data-dash-is-loading="true"]::before{
+    content: "Loading...";
+    display: inline-block;
+    color: var(--AQUAMARINE);
+    visibility: visible;
+}
+
+
+.gif-loading {
+  margin: 1rem auto;
+  width: 1280px;
+  height: 720px;
+  text-align: center;
+  font-size: 10px;
+  background-image: url("'./assets/logo/atb-analytics-group-logo.png'");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.dash-spinner {
+  background-image: url('./assets/logo/atb-analytics-group-logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+._dash-loading {
+  margin: 10rem 50%;
+  /*color: transparent;*/
+  color:var(--DIMGREY);
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+
+
+  background-image:url('./assets/logo/atb-analytics-group-logo.png');
+}
+
+._dash-loading::after {
+  font-color:var(--DARKCYAN);
+  font-size: 60px;
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  color:var(--DARKSLATEGREEN);
+  border-radius: 50%;
+  margin: 2rem auto;
+  vertical-align: text-bottom;
+  -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+  animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+}
+
+@-webkit-keyframes load6 {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    color:var(--DARKSLATECYAN)
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+       color:var(--DARKCYAN);
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em,
+      -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em,
+      -0.297em -0.775em 0 -0.477em;
+    color:var(--CADETBLUE);
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+      -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em,
+      -0.749em -0.34em 0 -0.477em;
+    color:var(--GOLDENROD);
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+      -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em,
+      -0.82em -0.09em 0 -0.477em;
+    color:var(--AZURE);
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    color:var(--AQUAMARINE);
+  }
+}
+@keyframes load6 {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    color:var(--AQUAMARINE);
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em,
+      -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em,
+      -0.297em -0.775em 0 -0.477em;
+    color:var(--CADETBLUE);
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+      -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em,
+      -0.749em -0.34em 0 -0.477em;
+    color:var(--GOLDENROD);
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+      -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em,
+      -0.82em -0.09em 0 -0.477em;
+    color:var(--AZURE);
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    color:var(--AQUAMARINE);
+  }
+}
+@-webkit-keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
